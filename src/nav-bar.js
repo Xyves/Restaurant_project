@@ -1,4 +1,4 @@
-const container = document.querySelector(".container");
+const container = document.querySelector(".bg-container");
 
 export default function generateAside() {
   function createNav() {
@@ -12,7 +12,7 @@ export default function generateAside() {
     const logoBox = document.createElement("div");
     Logo.src = "../src/img/Jenos_logo.png";
 
-    navBar.classList.add("h-1/6", "p-6", "m-full", "bg-orange-700", "text-4xl");
+    navBar.classList.add("h-1/4", "p-6", "m-full", "bg-orange-700", "text-4xl");
     ul.classList.add("flex", "justify-between", "block");
     home.classList.add("inline", "ml-25", "block", "p-1");
     about.classList.add("about", "mb-4", "inline", "block", "p-1");
