@@ -1,18 +1,29 @@
 const path = require("path");
 
 module.exports = {
+  module: {
+    rules: [
+      {
+        test: /\.html$/i,
+        loader: "html-loader",
+      },
+    ],
+  },
+  mode: "development",
+  watch: true,
   entry: "./src/index.js",
   output: {
-    filename: "bundle.js",
     path: path.resolve(__dirname, "dist"),
+    filename: "bundle.js",
   },
   devServer: {
     static: {
-      directory: path.join(__dirname, "public"),
-      watch: true,
+      directory: path.resolve(__dirname, "dist"),
     },
-    compress: true,
-    port: 8000,
+    port: 3000,
     open: true,
+    hot: true,
+    compress: true,
+    historyApiFallback: true,
   },
 };
