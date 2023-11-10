@@ -17,7 +17,7 @@ function createNav() {
   logoBox.classList.add("logo");
   for (let i = 0; i < menuItems.length; i++) {
     let li = document.createElement("li");
-    li.classList.add(menuItems[i]);
+    li.classList.add(menuItems[i], "tab");
     li.textContent = menuItems[i];
     ul.appendChild(li);
   }
@@ -29,4 +29,8 @@ function createNav() {
 function createMain() {
   const main = document.createElement("main");
   container.appendChild(main);
+  const menu = document.createElement("div");
+  menu.setAttribute("id", "menu");
+  container.appendChild(main);
+  main.appendChild(menu);
 }

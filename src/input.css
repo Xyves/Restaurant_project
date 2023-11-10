@@ -17,6 +17,14 @@ body {
   nav ul {
     flex-direction: column;
   }
+  .contactContainer {
+    width: 100% !important;
+    font-size: 0.8rem;
+  }
+  nav {
+    height: fit-content !important;
+    padding-bottom: 5vh !important;
+  }
 }
 .container {
   width: 100%;
@@ -27,7 +35,7 @@ body {
 nav {
   display: flex;
   justify-content: space-between;
-  height: 40vh;
+  height: 30vh;
   width: 100%;
   padding: 20px;
   margin-right: auto;
@@ -42,9 +50,10 @@ nav ul {
   backdrop-filter: blur(2px);
 }
 nav ul li {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   display: inline-block;
+  font-weight: bold;
   font-size: 2.5rem;
-  color: rgba(255, 0, 0, 0.895);
   letter-spacing: 1.5px;
   text-decoration: none;
   text-transform: uppercase;
@@ -63,7 +72,7 @@ nav ul li {
   height: 100px;
   margin-right: auto;
 }
-.bg-container {
+.pizzabg {
   background-image: url("../src/img/pizza.jpg");
   background-repeat: no-repeat;
   background-position: center;
@@ -71,10 +80,12 @@ nav ul li {
   position: relative;
 }
 
-main {
+#mainHome {
   display: grid;
   grid-template-columns: minmax(200px, 1fr) 1fr;
   height: 100%;
+  width: 100%;
+  margin-top: 5vh;
 }
 .lunchHeader {
   font-family: "Pacifico", cursive;
@@ -137,9 +148,41 @@ main {
 }
 .nav-bar {
   max-height: 15vh;
-  background-color: red;
+  background-color: #f5e8c7;
 }
-.nav-bar li {
-  color: white;
+
+.contactContainer {
+  width: 75%;
+  margin: 0 auto;
+  height: 100vh;
+  background-color: #363062;
+}
+.contactButtons {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(50px, 100%));
+  gap: 15px;
+  margin: 3rem 1rem;
+}
+.contactButtons div {
+  background-color: #818fb4;
+  cursor: pointer;
+  box-sizing: border-box;
+  height: 95px;
+  padding: 2rem;
+  text-align: center;
+}
+ul li {
+  color: black;
   margin-right: 3rem;
+}
+.contactContainer h1 {
+  padding-top: 1.5rem;
+  padding-left: 20px;
+}
+
+#formDiv {
+  background-color: yellow;
+  max-width: 55%;
+  height: 43%;
+  margin: 3rem auto;
 }

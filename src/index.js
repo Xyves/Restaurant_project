@@ -1,48 +1,46 @@
 import home from "./home.js";
 import menu from "./menu.js";
+import contact from "./contact.js";
+
 document.addEventListener("DOMContentLoaded", () => {
-  console.log("1");
+  // Create home page
   home();
-  const container = document.querySelector(".container");
-  const Home = document.querySelector(".home");
-  const Menu = document.querySelector(".menu");
-  let pageState = "home"; // Initial state
-  // const Contact = document.querySelector(".contact");
-  const addEvents = () => {
-    if (pageState == "home") {
-      addHomeClick();
-      addMenuClick();
-    } else if (pageState == "menu") {
-      addHomeClick();
-      addMenuClick();
-    }
-  };
-  function addHomeClick() {
+  // Add home, menu, contact eventListeners
+  addClickListeners();
+
+  function addClickListeners() {
+    const Menu = document.querySelector(".menu");
+    const Home = document.querySelector(".home");
+    const Contact = document.querySelector(".contact");
     Home.addEventListener("click", () => {
-      console.log("Home clicked");
-      changeHome();
+      wipeContent(() => {
+        console.log("home clicked");
+        home();
+        addClickListeners();
+      });
+    });
+    Contact.addEventListener("click", () => {
+      wipeContent(() => {
+        console.log("contact clicked");
+        contact();
+        addClickListeners();
+      });
+    });
+    Menu.addEventListener("click", () => {
+      wipeContent(() => {
+        console.log("menu clicked");
+        menu();
+        addClickListeners();
+      });
     });
   }
-  function addMenuClick() {
-    Menu.addEventListener("click", async () => {
-      console.log("Menu clicked");
-      await changeMenu();
-      let pageState = "menu";
-    });
-  }
-  const wipeContent = () => {
+  function wipeContent(callback) {
+    const container = document.querySelector(".container");
     console.log("WIPED!");
+
     container.innerHTML = "";
-  };
-  const changeMenu = async () => {
-    console.log("Menu changed");
-    wipeContent();
-    await menu();
-    addHomeClick();
-  };
-  const changeHome = async () => {
-    wipeContent();
-    await home();
-    addHomeClick();
-  };
+    if (typeof callback === "function") {
+      callback();
+    }
+  }
 });
