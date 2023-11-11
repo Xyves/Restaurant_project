@@ -25,6 +25,15 @@ body {
     height: fit-content !important;
     padding-bottom: 5vh !important;
   }
+  #formDiv {
+    min-width: 80%;
+  }
+  .contactContainer > * {
+    font-size: 1rem;
+  }
+  #menu img {
+    width: 90% !important;
+  }
 }
 .container {
   width: 100%;
@@ -152,11 +161,24 @@ nav ul li {
 }
 
 .contactContainer {
+  font-size: 1.6rem;
   width: 75%;
   margin: 0 auto;
   height: 100vh;
   background-color: #363062;
 }
+.contactContainer:first-child {
+  color: white;
+  padding-top: 30px;
+  padding-left: 20px;
+}
+.contactContainer h3 {
+  color: white;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
 .contactButtons {
   display: grid;
   grid-template-columns: repeat(3, minmax(50px, 100%));
@@ -181,8 +203,77 @@ ul li {
 }
 
 #formDiv {
-  background-color: yellow;
-  max-width: 55%;
-  height: 43%;
-  margin: 3rem auto;
+  background-color: white;
+  width: 65%;
+  height: 45%;
+  margin: 0 auto;
+  padding: 20px;
+  box-sizing: border-box;
+}
+.contactHeader {
+  text-align: center;
+  padding: 10px;
+  margin-top: 30px;
+  color: black;
+  margin-bottom: 5%;
+}
+#formContact {
+  height: 70%;
+  margin-top: 50px;
+  margin: 10px;
+  background-color: white;
+}
+#formContact input {
+  width: 70%;
+  height: 1rem;
+  border-radius: 5px;
+  border: 1px solid black;
+  margin-bottom: 20px;
+  padding: 0.5rem 0.6rem;
+}
+textarea {
+  width: 0;
+  height: 0;
+  resize: none;
+}
+#formContact h3 {
+  color: black;
+}
+#formContact textarea {
+  display: block;
+  height: 7rem;
+  border: 1px solid black;
+  padding: 0.5rem 0.6rem;
+  text-align: top;
+  width: 70%;
+}
+form {
+  margin-left: 10px;
+}
+.formHeader {
+  color: black;
+  margin-bottom: 20px;
+  margin-left: 10px;
+}
+#submitForm {
+  color: white;
+  padding: 10px 20px;
+  margin-left: inherit;
+  margin-top: 10px;
+  background-color: rgb(90, 89, 89);
+  letter-spacing: 3px;
+}
+#submitForm:active {
+  background-color: rgb(53, 53, 53);
+  padding: 11px 21px;
+}
+#menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#menu img {
+  height: 75vh;
+  width: 50%;
+  margin-top: 20px;
 }

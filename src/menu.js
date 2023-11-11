@@ -33,4 +33,7 @@ function createMain() {
   menu.setAttribute("id", "menu");
   container.appendChild(main);
   main.appendChild(menu);
+  const menuImg = document.createElement("img");
+  menuImg.src = "../src/img/menu.jpg";
+  menu.appendChild(menuImg);
 }
