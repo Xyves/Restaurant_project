@@ -13,7 +13,7 @@ function createNav() {
   const Logo = document.createElement("img");
   const logoBox = document.createElement("div");
 
-  Logo.src = "../src/img/Jenos_logo.png";
+  Logo.src = "./img/Jenos_logo.png";
   logoBox.classList.add("logo");
   for (let i = 0; i < menuItems.length; i++) {
     let li = document.createElement("li");
@@ -34,6 +34,6 @@ function createMain() {
   container.appendChild(main);
   main.appendChild(menu);
   const menuImg = document.createElement("img");
-  menuImg.src = "../src/img/menu.jpg";
+  menuImg.src = "./img/menu.jpg";
   menu.appendChild(menuImg);
 }

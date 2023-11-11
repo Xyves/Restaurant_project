@@ -15,7 +15,7 @@ export default function () {
     // Logo
     const Logo = document.createElement("img");
     const logoBox = document.createElement("div");
-    Logo.src = "../src/img/Jenos_logo.png";
+    Logo.src = "./img/Jenos_logo.png";
     logoBox.classList.add("logo");
 
     for (let i = 0; i < menuItems.length; i++) {
@@ -67,7 +67,7 @@ export default function () {
 
     LimitedHeader.textContent = "Limited time offer";
     LimitedHeader.classList.add("lunchHeader2");
-    pizzaImg.src = "../src/img/pizza2.jpg";
+    pizzaImg.src = "./img/pizza2.jpg";
     lunchHeader.classList.add("lunchHeader");
     lunchHeader.textContent = "Lunch Specials";
     textContainer.classList.add("specialsOffer");

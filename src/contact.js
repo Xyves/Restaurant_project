@@ -10,7 +10,7 @@ export default function () {
     // Classlist
     nav.classList.add("nav-bar");
     logoBox.classList.add("logo");
-    Logo.src = "../src/img/Jenos_logo.png";
+    Logo.src = "./img/Jenos_logo.png";
 
     // Create navbar list
     for (let i = 0; i < menuItems.length; i++) {
