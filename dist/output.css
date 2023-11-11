@@ -82,7 +82,7 @@ nav ul li {
   margin-right: auto;
 }
 .pizzabg {
-  background-image: url("../src/img/pizza.jpg");
+  background-image: url("./img/pizza.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
